@@ -14,8 +14,10 @@ export default function RootLayout({ children }) {
       <head>
         
       </head>
+      <body className="inline-block p-6 bg-gradient-to-bl from-green-400 to-blue-400">
+        <main className={inter.className}>{children}</main>
+      </body>
       
-      <body className={inter.className}>{children}</body>
     </html>
   )
 };
