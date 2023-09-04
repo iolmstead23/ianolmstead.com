@@ -6,7 +6,7 @@ import NavItem from "./NavItem";
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
+  { text: "About", href: "/about" },
   { text: "Contact", href: "/contact" },
   { text: "Blog", href: "/blog" },
 ];
@@ -16,20 +16,20 @@ const Navbar = () => {
   const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
-    <header>
+    <header className="bg-bg1 dark:bg-bg1Dark text-primary dark:text-primaryDark">
       <nav className={`nav`}>
         <Link href={"/"}>
             <h1 className="logo">ianOlmstead</h1>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
+          className={`nav__menu-bar bg-bg1 dark:bg-bg1Dark`}
         >
-          <div></div>
-          <div></div>
-          <div></div>
+          <div className="bg-black dark:bg-white"></div>
+          <div className="bg-black dark:bg-white"></div>
+          <div className="bg-black dark:bg-white"></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        <div className={`${navActive ? "active" : ""} nav__menu-list bg-bg1 dark:bg-bg1Dark`}>
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {
