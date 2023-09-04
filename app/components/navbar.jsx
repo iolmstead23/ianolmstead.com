@@ -1,12 +1,50 @@
-import Link from 'next/link'
+'use client'
 
-export default function Navbar({ user }) {
+import Link from "next/link";
+import React, { useState } from "react";
+import NavItem from "./NavItem";
+
+const MENU_LIST = [
+  { text: "Home", href: "/" },
+  { text: "About Us", href: "/about" },
+  { text: "Contact", href: "/contact" },
+  { text: "Blog", href: "/blog" },
+];
+
+const Navbar = () => {
+  const [navActive, setNavActive] = useState(null);
+  const [activeIdx, setActiveIdx] = useState(-1);
+
   return (
-    <nav>
-      <h1>Ian Olmstead</h1>
-      <Link href="/">About</Link>
-      <Link href="/blog">Blog</Link>
-      <Link href="/contact">Contact</Link>
-    </nav>
-  )
-}
+    <header>
+      <nav className={`nav`}>
+        <Link href={"/"}>
+            <h1 className="logo">ianOlmstead</h1>
+        </Link>
+        <div
+          onClick={() => setNavActive(!navActive)}
+          className={`nav__menu-bar`}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+          {MENU_LIST.map((menu, idx) => (
+            <div
+              onClick={() => {
+                setActiveIdx(idx);
+                setNavActive(false);
+              }}
+              key={menu.text}
+            >
+              <NavItem active={activeIdx === idx} {...menu} />
+            </div>
+          ))}
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

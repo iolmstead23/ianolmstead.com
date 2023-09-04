@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Blog() {
+export default function Contact() {
     return (
-        <div className="container text-2xl">
+        <div className="container text-2xl text-primary">
         Links
         <div className="flex-col text-base justify-center card">
           <p>LinkedIn <Link href="https://www.linkedin.com/in/ubermensch">@ubermensch</Link></p>
