@@ -1,11 +1,23 @@
 export default function Hero() {
   return (
-        <div className="bg-[url('/coding.gif')] bg-no-repeat bg-cover">
-          <div className="container mx-auto h-36 md:h-48 lg:h-96">
-            <div className="grid lg:grid-cols-4 md:grid-cols-2">
-              <h1 className="text-lg text-center h-28 m-10 bg-bg1 dark:bg-bg1Dark text-primary dark:text-primaryDark align-middle lg:col-start-3 md:col-start-2">Action Words That Catch Your Immediate Attention</h1>
+    <section class="mb-40">
+      <div class="overflow-hidden bg-cover bg-no-repeat bg-[url('/coding.gif')] h-[500px]">
+        <div
+          class="relative top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
+          <div class="flex h-full items-center justify-center">
+            <div class="px-6 text-center text-white md:px-12">
+              <h1 class="mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
+                Programmer & Analyst <br /><span>I dont know what to write here</span>
+              </h1>
+              <button type="button"
+                class="rounded border-2 border-neutral-50 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
+                data-te-ripple-init data-te-ripple-color="light">
+                Read More
+              </button>
             </div>
           </div>
         </div>
+      </div>
+    </section>
      )
 }

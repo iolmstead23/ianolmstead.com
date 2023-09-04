@@ -11,13 +11,12 @@ module.exports = {
         primary: '#000000',
         primaryDark: '#ffffff',
         logo: '#5C8374',
-        bg1: '#645CBB',
+        bg1: '#2d3748',
         box: '#EBC7E6',
-        bg1Dark: '#371B58',
+        bg1Dark: '#2d3748',
         boxDark: '#5B4B8A',
       }
     },
   },
   plugins: [],
-  darkMode: false,
 }

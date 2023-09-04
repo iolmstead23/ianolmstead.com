@@ -4,7 +4,7 @@ const dummy_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 
 export default function Portfolio() {
     return (
-        <div className="container m-10">
+        <div className="container w-full md:flex md:flex-row md:flex-wrap">
             <Project title="Time Series Data" text={dummy_text} url="/time_series_data.png" />
             <Project title="Regression" text={dummy_text} url="/time_series_data.png" />
             <Project title="Neural Network" text={dummy_text} url="/time_series_data.png" />
