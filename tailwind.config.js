@@ -8,15 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#000000',
-        primaryDark: '#ffffff',
+        primary: '#FFFFFF',
+        primaryDark: '#000000',
         logo: '#5C8374',
         bg1: '#2d3748',
-        box: '#EBC7E6',
-        bg1Dark: '#2d3748',
-        boxDark: '#5B4B8A',
+        bg1Dark: '#b9bdc1',
       }
     },
   },
+  darkMode: true,
   plugins: [],
 }
