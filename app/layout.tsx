@@ -15,12 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-black">
       <body className={`${rubik.className}`}>
-        <div>
-          <Navbar  />
-          {children}
-          <Footer />
-          <Analytics />
-        </div>
+        <Navbar  />
+        {children}
+        <Footer />
+        <Analytics />
       </body>
     </html>
   )

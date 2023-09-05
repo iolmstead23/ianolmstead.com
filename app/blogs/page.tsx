@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Link from 'next/link'
+import Card from '../components/card'
 
 export default function Page() {
   const blogDir = "blogs"
@@ -18,38 +18,22 @@ export default function Page() {
       slug: filename.replace('.mdx','')
     }
   })
+
     return (
-      <main className="flex flex-col text-primary dark:text-primaryDark">
-        <h1 className="text-3xl font-bold">
+      <main>
+        <h1 className="text-3xl font-bold text-primary dark:text-primaryDark">
           Blogs
         </h1>
 
-        <section className="py-10">
-          <h1 className="text-2xl font-bold">
-            Latest Blogs
-          </h1>
-          <div className="py-2">
-            {blogs.map(blog => (
-              <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
-                <div className="py-2 flex justify-between align-middle gap-2">
-                  <h3 className="text-lg font-bold">
-                    {blog.meta.title}
-                  </h3>
-                  <div>
-                    <p>
-                      {blog.meta.description}
-                    </p>
-                  </div>
-                  <div className="my-auto">
-                    <p>
-                      {blog.meta.date}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <h1 className="text-2xl font-bold text-primary dark:text-primaryDark ">
+          Latest Blogs
+        </h1>
+
+        <div className="container w-full md:flex md:flex-row md:flex-wrap">
+          {blogs.map(blog => (
+            <Card title={blog.meta.title} text={blog.meta.description} image="/dummy_image.png" url={'/blogs/' + blog.slug} />
+          ))}
+        </div>
       </main>
     )
   }

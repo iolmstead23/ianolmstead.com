@@ -11,13 +11,15 @@ const MENU_LIST = [
   { text: "Blog", href: "/blogs" },
 ];
 
+
 const Navbar = () => {
-  const [navActive, setNavActive] = useState(null);
-  const [activeIdx, setActiveIdx] = useState(-1);
+  const [navActive, setNavActive] = useState(null)
+  const [activeIdx, setActiveIdx] = useState(-1)
 
   return (
     <header className="bg-bg1 dark:bg-bg1Dark text-primary dark:text-primaryDark">
       <nav className={`nav`}>
+
         <Link href={"/"}>
             <h1 className="logo">ianOlmstead</h1>
         </Link>

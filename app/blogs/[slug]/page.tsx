@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
-const blogDir = "blogs"
+const blogDir: string = "blogs"
 
 export async function generateStaticParams() {
 
