@@ -31,7 +31,7 @@ export default function Page() {
 
         <div className="container w-full md:flex md:flex-row md:flex-wrap">
           {blogs.map(blog => (
-            <Card title={blog.meta.title} text={blog.meta.description} image="/dummy_image.png" url={'/blogs/' + blog.slug} />
+            <Card title={blog.meta.title} text={blog.meta.description} image="/dummy_image.png" url={'/blogs/' + blog.slug} key={blog.slug}/>
           ))}
         </div>
       </main>
