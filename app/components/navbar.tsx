@@ -9,6 +9,7 @@ const MENU_LIST = [
   { text: "About", href: "/about" },
   { text: "Contact", href: "/contact" },
   { text: "Blog", href: "/blogs" },
+  { text: "Landing", href: "/landing" },
 ];
 
 
@@ -17,7 +18,7 @@ const Navbar = () => {
   const [activeIdx, setActiveIdx] = useState(-1)
 
   return (
-    <header className="bg-bg1 dark:bg-bg1Dark text-primary dark:text-primaryDark">
+    <header className="bg-bg1 text-primary">
       <nav className={`nav`}>
 
         <Link href={"/"}>
@@ -27,11 +28,11 @@ const Navbar = () => {
           onClick={() => setNavActive(!navActive)}
           className={`nav__menu-bar bg-bg1 dark:bg-bg1Dark`}
         >
-          <div className="bg-black dark:bg-white"></div>
-          <div className="bg-black dark:bg-white"></div>
-          <div className="bg-black dark:bg-white"></div>
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list bg-bg1 dark:bg-bg1Dark`}>
+        <div className={`${navActive ? "active" : ""} nav__menu-list bg-bg1`}>
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {

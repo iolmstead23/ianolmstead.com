@@ -4,16 +4,17 @@ const dummy_text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing e
 
 export default function Portfolio() {
     return (
-        <div className="container w-full md:flex md:flex-row md:flex-wrap">
-            <Card title="Time Series Data" text={dummy_text} image="/time_series_data.png" url="#"/>
-            <Card title="Regression" text={dummy_text} image="/time_series_data.png"  url="#"/>
-            <Card title="Neural Network" text={dummy_text} image="/time_series_data.png"  url="#"/>
-            <Card title="Tree/Forest" text={dummy_text} image="/time_series_data.png"  url="#"/>
-            <Card title="Recomendation System" text={dummy_text} image="/time_series_data.png"  url="#"/>
-            <Card title="Clustering" text={dummy_text} image="/time_series_data.png"  url="#"/>
-            <Card title="Credit Risk Modeling" text={dummy_text} image="/time_series_data.png"  url="#"/>
-            <Card title="Website" text={dummy_text} image="/time_series_data.png"  url="#"/>
-            
+        <div className="container">
+            <div className="w-full md:flex md:flex-row md:flex-wrap lg:pl-[100px]">
+                <Card title="Time Series Data" text={dummy_text} image="/time_series_data.png" url="#"/>
+                <Card title="Regression" text={dummy_text} image="/time_series_data.png"  url="#"/>
+                <Card title="Neural Network" text={dummy_text} image="/time_series_data.png"  url="#"/>
+                <Card title="Tree/Forest" text={dummy_text} image="/time_series_data.png"  url="#"/>
+                <Card title="Recomendation System" text={dummy_text} image="/time_series_data.png"  url="#"/>
+                <Card title="Clustering" text={dummy_text} image="/time_series_data.png"  url="#"/>
+                <Card title="Credit Risk Modeling" text={dummy_text} image="/time_series_data.png"  url="#"/>
+                <Card title="Website" text={dummy_text} image="/time_series_data.png"  url="#"/> 
+            </div>
         </div>
     )
 }

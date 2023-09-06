@@ -15,17 +15,17 @@ interface Project {
 export default function Project(project: Project) {
     return (
 
-        <motion.div className="max-w-sm bg-bg1 dark:bg-bg1Dark border border-gray-600 rounded-lg shadow m-10 opacity-80 hover:opacity-100"
+        <motion.div className="max-w-sm bg-bg1 border border-gray-600 rounded-lg shadow m-10 opacity-80 hover:opacity-100"
         whileHover={{ scale: 1.1 }}>
 
             <Image className="rounded-t-lg" src={project.image} alt="" width={500} height={500} />
 
             <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary dark:text-primaryDark">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary">
                     {project.title}
                 </h5>
 
-                <p className="mb-3 font-normal text-primary dark:text-primaryDark">
+                <p className="mb-3 font-normal text-primary">
                     {project.text.slice(0,250)}
                 </p>
                 

@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <div className="mx-auto min-h-screen">
       <Hero />
-      <div>
+      
+      <div className="w-full flex flex-row flex-wrap">
         <Portfolio />
       </div>
     </div>
