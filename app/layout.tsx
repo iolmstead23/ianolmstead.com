@@ -1,7 +1,6 @@
 import './globals.css'
 import { Rubik } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
-import Navbar from './components/navbar'
 import Footer from './components/footer'
 
 const rubik = Rubik({ subsets: ['latin'] })
@@ -15,7 +14,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-black">
       <body className={`${rubik.className}`}>
-        <Navbar  />
         {children}
         <Footer />
         <Analytics />
