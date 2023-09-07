@@ -1,12 +1,4 @@
 import Link from "next/link";
-import NavItem from "./NavItem";
-
-const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "Blog", href: "/blogs" },
-
-];
-
 
 const Navbar = () => {
 

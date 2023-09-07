@@ -1,6 +1,6 @@
-import AboutLanding from "./components/landing about";
-import Banner from "./components/landing banner";
-import Hero from "./components/landing hero";
+import AboutLanding from "./components/about";
+import Banner from "./components/banner";
+import Hero from "./components/hero";
 import Portfolio from "./components/portfolio";
 
 export default function Landing() {
