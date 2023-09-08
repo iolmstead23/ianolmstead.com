@@ -14,14 +14,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-black">
+    <html lang="en">
       <body className={`${rubik.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
           <Footer />
         </ThemeProvider>
-        
+
         <Analytics />
       </body>
     </html>

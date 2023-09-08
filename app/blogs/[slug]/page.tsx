@@ -33,12 +33,15 @@ export default function Page({params}: any) {
   const props = getPost(params)
 
   return (
-    <div className="text-primary dark:test-primaryDark">
+    <div className="text-primary">
       <div>
-        {props.fontMatter.title}
-      </div>
-      <div>
-        <MDXRemote source={props.content}></MDXRemote>
+        <div className="text-center text-3xl font-bold">
+          {props.fontMatter.title}
+        </div>
+
+        <div className="text-justified">
+          <MDXRemote source={props.content}></MDXRemote>
+        </div>
       </div>
     </div>
   )

@@ -18,7 +18,7 @@ import Link from "next/link";
 const Navbar = () => {
 
   return (
-      <div className="container flex flex-row flex-wrap justify-end">
+      <div className="flex flex-row flex-wrap justify-end">
         <div>
           <NavigationMenu>
             <NavigationMenuList>

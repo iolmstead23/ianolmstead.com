@@ -12,7 +12,7 @@ export default function Skill(project: Skill) {
 
         <motion.div className="bg-bg1 border border-gray-600 rounded-lg shadow m-10 opacity-80 hover:opacity-100 max-w-lg"
         whileHover={{ scale: 1.1 }}>
-            <div className="container flex justify-center">
+            <div className="flex justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" className="h-12 w-12">
                     <path stroke-linecap="round" stroke-linejoin="round"

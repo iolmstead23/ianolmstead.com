@@ -11,9 +11,9 @@ const dummyText: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 export default function Banner() {
     return (
-        <div className="container w-full py-20">
+        <div className="w-full py-20">
             <div className="flex flex-row flex-wrap justify-around lg:ml-[80px]">
-                <Card className="shadow-2xl">
+                <Card className="shadow-2xl my-10">
                     <CardHeader>
                         <CardTitle className="text-center">Analyst</CardTitle>
                     </CardHeader>
@@ -22,7 +22,7 @@ export default function Banner() {
                     </CardContent>
                 </Card>
 
-                <Card className="shadow-2xl">
+                <Card className="shadow-2xl my-10">
                     <CardHeader>
                         <CardTitle className="text-center">Programmer</CardTitle>
                     </CardHeader>
@@ -31,7 +31,7 @@ export default function Banner() {
                     </CardContent>
                 </Card>
 
-                <Card className="shadow-2xl">
+                <Card className="shadow-2xl my-10">
                     <CardHeader>
                         <CardTitle className="text-center">Front End<br />Developer</CardTitle>
                     </CardHeader>
