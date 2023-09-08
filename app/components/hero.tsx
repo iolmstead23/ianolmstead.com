@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-      <div>
+      <div className="clip-banner">
         <div className="bg-cover bg-no-repeat bg-[url('/coding.gif')] h-[500px] clip-banner">
           <div className="bg-[hsla(0,0%,0%,0.75)] overflow-hidden h-full">
             <div className="flex flex-wrap flex-col font-bold text-center text-white lg:my-[200px] md:my-[175px] my-[150px]">

@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Card from '../components/card'
+import Card from '../components/ui/landing card'
 
 export default function Page() {
   const blogDir = "blogs"
