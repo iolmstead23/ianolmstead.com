@@ -8,7 +8,7 @@ export default function Hero() {
                   Like what you see?
                 </h1>
                 <h2 className="text-2xl">
-                  Find out how I can digitize your business.
+                  Find out how I can digitize your business!
                 </h2>
               </div>
             </div>
