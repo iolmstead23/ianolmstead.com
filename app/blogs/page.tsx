@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Card from '../components/ui/portfolio card'
+import Card from '@/components/ui/portfolio card'
 
 export default function Page() {
   const blogDir = "blogs"
@@ -22,16 +22,12 @@ export default function Page() {
     return (
       <div>
         <h1 className="text-3xl font-bold px-10">
-          Blogs
-        </h1>
-
-        <h1 className="text-2xl font-bold px-10">
-          Latest Blogs
+          Blogs <br />
         </h1>
 
         <div className="w-full md:flex md:flex-row md:flex-wrap">
           {blogs.map(blog => (
-            <Card title={blog.meta.title} text={blog.meta.description} image="/dummy_image.png" url={'/blogs/' + blog.slug} key={blog.slug}/>
+            <Card title={blog.meta.title} text={blog.meta.description.slice(0,250) + "..."} image="/dummy_image.png" url={'/blogs/' + blog.slug} key={blog.slug}/>
           ))}
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client"
 
-import { navigationMenuTriggerStyle } from "./ui/navigationmenu"
-import { ModeToggle } from "./ui/darkmode"
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+import { ModeToggle } from "@/components/ui/darkmode-toggle"
 
 import {
   NavigationMenu,
@@ -12,7 +12,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from "./ui/navigationmenu"
+} from "@/components/ui/navigation-menu"
+
 import Link from "next/link";
 
 const Navbar = () => {
@@ -24,19 +25,15 @@ const Navbar = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink>
-                  <Link href="/">
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      Home
-                    </NavigationMenuLink>
-                  </Link>
+                    <Link href="/">
+                        Home
+                    </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink>
-                  <Link href="/blogs">
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <Link href="/blogs">
                         Blog
-                      </NavigationMenuLink>
                     </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
