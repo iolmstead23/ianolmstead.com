@@ -21,13 +21,13 @@ export default function Page() {
 
     return (
       <div>
-        <h1 className="text-3xl font-bold px-10">
+        <h1 className="text-3xl font-bold p-10">
           Blogs <br />
         </h1>
 
-        <div className="w-full md:flex md:flex-row md:flex-wrap">
+        <div className="md:flex md:flex-row md:flex-wrap">
           {blogs.map(blog => (
-            <Card title={blog.meta.title} text={blog.meta.description.slice(0,250) + "..."} image="/dummy_image.png" url={'/blogs/' + blog.slug} key={blog.slug}/>
+            <Card title={blog.meta.title} text={blog.meta.description.slice(0,200) + "..."} image="/dummy_image.png" url={'/blogs/' + blog.slug} key={blog.slug}/>
           ))}
         </div>
       </div>

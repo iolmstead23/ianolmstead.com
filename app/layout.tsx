@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
-import Header from '@/components/header'
 import { Separator } from '@/components/ui/separator'
 import { ThemeProvider } from "@/components/theme-provider"
 import Footer from '@/components/footer'
@@ -29,10 +28,6 @@ export default function RootLayout({
 
           <div>
             <Separator />
-          </div>
-
-          <div>
-            <Header />
           </div>
 
           {children}
