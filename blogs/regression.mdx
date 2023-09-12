@@ -1,6 +1,7 @@
 ---
 title: Regression
-date: 4th September 2023
+date: 9th September 2023
+thumbnail: /bollinger-bands.png
 description: Regression is a fundamental concept in machine learning and statistical modeling. It is a supervised learning technique used for predicting a continuous numeric value (output or dependent variable) based on one or more input features (independent variables).
 ---
 
@@ -8,55 +9,49 @@ Regression is a fundamental concept in machine learning and statistical modeling
 
 Here are some key aspects of regression in machine learning:
 
-## **Types of Regression:**
+### **Types of Regression:**
 
 
 ### - **Simple Linear Regression:**
 
 In this type, there is only one independent variable used to predict the target variable. The relationship is modeled as a straight line, represented as y = mx + b, where y is the target variable, x is the input feature, m is the slope, and b is the intercept.
 
-### - **Multiple Linear Regression:**
+- **Multiple Linear Regression:** When there are multiple independent variables, multiple linear regression is used. The relationship is represented as y = b0 + b1*x1 + b2*x2 + ... + bn*xn, where y is the target variable, x1, x2, ..., xn are the input features, and b0, b1, b2, ..., bn are the coefficients.
 
-When there are multiple independent variables, multiple linear regression is used. The relationship is represented as y = b0 + b1*x1 + b2*x2 + ... + bn*xn, where y is the target variable, x1, x2, ..., xn are the input features, and b0, b1, b2, ..., bn are the coefficients.
+- **Polynomial Regression:** Polynomial regression is an extension of linear regression, where the relationship between the variables is modeled as a polynomial function. It can capture more complex relationships in the data by introducing higher-order terms (e.g., quadratic, cubic) into the equation.
 
-### - **Polynomial Regression:**
+- **Logistic Regression:** Despite its name, logistic regression is used for binary classification tasks, not regression. It models the probability of an input belonging to one of two classes (0 or 1) using a logistic function.
 
-Polynomial regression is an extension of linear regression, where the relationship between the variables is modeled as a polynomial function. It can capture more complex relationships in the data by introducing higher-order terms (e.g., quadratic, cubic) into the equation.
-
-### - **Logistic Regression:**
-
-Despite its name, logistic regression is used for binary classification tasks, not regression. It models the probability of an input belonging to one of two classes (0 or 1) using a logistic function.
-
-## **Loss Function:**
+### **Loss Function:**
 
 In regression, a loss function is used to measure the error between the predicted values and the actual target values. The most commonly used loss function is the Mean Squared Error (MSE), which calculates the average squared difference between predictions and true values. The goal is to minimize this loss function during training.
 Coefficients: In linear regression, the coefficients (or weights) represent the relationship between each input feature and the target variable. These coefficients are learned during the training process.
 
-## **Regularization:**
+### **Regularization:**
 
 To prevent overfitting (a model that fits the training data too closely but doesn't generalize well), regularization techniques like L1 (Lasso) and L2 (Ridge) regularization can be applied to penalize large coefficient values.
 
-## **Evaluation Metrics:**
+### **Evaluation Metrics:**
 
 Common metrics for evaluating regression models include:
 
-## **Mean Absolute Error (MAE):**
+### **Mean Absolute Error (MAE):**
 
 Measures the average absolute difference between predictions and true values.
 
-## **Root Mean Squared Error (RMSE):**
+### **Root Mean Squared Error (RMSE):**
 
 Measures the square root of the average squared difference between predictions and true values.
 
-## **R-squared (R2) Score:**
+### **R-squared (R2) Score:**
 
 Measures the proportion of the variance in the target variable that is predictable from the input features. It ranges from 0 to 1, with higher values indicating a better fit.
 
-## **Applications:**
+### **Applications:**
 
 Regression is widely used in various domains, including finance (stock price prediction), healthcare (patient outcome prediction), economics (market demand analysis), and many others.
 
-## **Techniques:**
+### **Techniques:**
 
 Machine learning libraries and frameworks such as scikit-learn (Python), TensorFlow, and PyTorch provide tools for performing regression analysis. These libraries make it easier to implement and experiment with different regression models.
 

@@ -1,12 +1,13 @@
 ---
 title: Trees/Forest
-date: 4th September 2023
+date: 9th September 2023
+thumbnail: /bollinger-bands.png
 description: Decision Trees and Random Forests are powerful machine learning algorithms used for both classification and regression tasks. They are particularly popular for their simplicity, interpretability, and effectiveness in a wide range of applications.
 ---
 
 Decision Trees and Random Forests are powerful machine learning algorithms used for both classification and regression tasks. They are particularly popular for their simplicity, interpretability, and effectiveness in a wide range of applications. Let's delve into each of these concepts:
 
-**Decision Trees:**
+### **Decision Trees:**
 
 A Decision Tree is a supervised learning algorithm that makes decisions by recursively splitting the dataset into subsets based on the most significant attributes or features. At each step, it selects the feature that best separates the data according to some criterion (e.g., Gini impurity, entropy, or information gain). This process continues until a stopping condition is met, such as a predefined depth or purity threshold. The resulting tree structure represents a flowchart-like model for making decisions.
 
@@ -20,20 +21,17 @@ Decision Trees are highly interpretable, making them useful for explaining the l
 
 They are used in various domains, such as healthcare (diagnosis), finance (credit scoring), and natural language processing (part-of-speech tagging).
 
-Random Forests:
+### **Random Forests:**
 
 Random Forests is an ensemble learning method that improves upon the shortcomings of Decision Trees, particularly their tendency to overfit. Instead of relying on a single decision tree, Random Forests construct multiple decision trees and combine their predictions. Here's how Random Forests work:
 
 Bootstrapping: Randomly select subsets of the training data with replacement (bootstrapping) to create multiple training datasets.
 
-
 Decision Tree Construction: For each dataset, build a Decision Tree. However, during the construction of each tree, only consider a random subset of features at each node (feature bagging).
-
 
 Voting or Averaging: When making predictions, each tree in the forest votes (for classification tasks) or provides an output (for regression tasks). For classification, the majority vote determines the final prediction. For regression, the predictions are typically averaged.
 
-
-Key advantages of Random Forests:
+### **Key advantages of Random Forests:**
 
 They are highly robust and less prone to overfitting compared to single Decision Trees.
 

@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import Image from 'next/image'
 
 const blogDir: string = "blogs"
 
@@ -34,7 +35,12 @@ export default function Page({params}: any) {
 
   return (
       <article className="my-10 prose prose-xl dark:prose-invert max-w-full">
-        <div className="text-center text-3xl font-bold">
+
+        <div className="flex justify-center">
+          <Image src={props.fontMatter.thumbnail} alt="Blog Thumbnail" height={500} width={500}/>
+        </div>
+
+        <div className="text-center text-5xl font-bold">
           {props.fontMatter.title}
         </div>
 

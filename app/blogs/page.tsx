@@ -3,7 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import Card from '@/components/ui/portfolio card'
 
-export default function Page() {
+export default function Blog() {
   const blogDir = "blogs"
 
   const files = fs.readdirSync(path.join(blogDir))
@@ -19,17 +19,17 @@ export default function Page() {
     }
   })
 
-    return (
-      <div>
-        <h1 className="text-3xl font-bold p-10">
-          Blogs <br />
-        </h1>
+  return (
+    <div>
+      <h1 className="text-3xl font-bold p-10">
+        Blogs <br />
+      </h1>
 
-        <div className="md:flex md:flex-row md:flex-wrap">
-          {blogs.map(blog => (
-            <Card title={blog.meta.title} text={blog.meta.description.slice(0,200) + "..."} image="/dummy_image.png" url={'/blogs/' + blog.slug} key={blog.slug}/>
-          ))}
-        </div>
+      <div className="md:flex md:flex-row md:flex-wrap justify-center">
+        {blogs.map(blog => (
+          <Card title={blog.meta.title} text={blog.meta.description.slice(0,200) + "..."} image={blog.meta.thumbnail} url={'/blogs/' + blog.slug} key={blog.slug}/>
+        ))}
       </div>
-    )
-  }
+    </div>
+  )
+}

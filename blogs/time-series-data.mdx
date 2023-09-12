@@ -1,78 +1,62 @@
 ---
 title: Time Series Data
-date: 4th September 2023
+date: 9th September 2023
+thumbnail: /bollinger-bands.png
 description: Time series data is data that has time as the main vector. Is a sequence of data points indexed in time order. This can be stock data or any data with a fixed time interval.
 ---
 
-Time series data refers to a type of data that is collected or recorded over a sequence of equally spaced time intervals. This data is used to track and analyze changes in a variable or set of variables over time. Time series data is encountered in a wide range of fields and applications, including finance, economics, weather forecasting, environmental monitoring, and many others. Understanding time series data is essential for making predictions, identifying patterns, and making informed decisions in various domains.
+Time series data refers to a type of data that is collected or recorded over a sequence of equally spaced time intervals. This data is used to track and analyze changes in a variable or set of variables over time. Time series data is encountered in a wide range of fields and applications, including finance, economics, weather forecasting, environmental monitoring, and many others. Understanding time series data is essential for making predictions, identifying patterns, and making informed decisions in various domains. The following are characteristics and concepts related to time series data.
 
-Here are some key characteristics and concepts related to time series data:
-
-## **Time Dimension:**
-
+### **Time Dimension:**
 
 Time series data has a clear chronological order, with each data point associated with a specific time or time interval. The time dimension can be regular (e.g., hourly, daily, monthly) or irregular (e.g., timestamps associated with events).
 
-
-## **Temporal Dependency:**
-
+### **Temporal Dependency:**
 
 Time series data often exhibits temporal dependency, meaning that the value of a variable at one time point is influenced by its past values. This autocorrelation is a crucial aspect of time series analysis.
 
-
-## **Components of a Time Series:**
-
+### **Components of a Time Series:**
 
 Time series data can typically be decomposed into several components:
+
     - Trend: The long-term direction in the data, which represents a consistent increase or decrease over time.
+
     - Seasonality: Repeating patterns or cycles that occur at fixed intervals, such as daily, weekly, or yearly.
+
     - Irregular/Noise: Random fluctuations or noise that cannot be attributed to trends or seasonality.
 
-## **Stationarity:**
+![decomposition](/decomposition.png)
 
+### **Stationarity:**
 
 A time series is considered stationary when its statistical properties, such as mean and variance, remain constant over time. Stationary data is easier to model and analyze.
 
-
-## **Forecasting:**
-
+### **Forecasting:**
 
 One of the primary goals of time series analysis is to make future predictions based on historical data. Various techniques, including ARIMA (AutoRegressive Integrated Moving Average) models, exponential smoothing, and machine learning algorithms, are used for forecasting.
 
-
-## **Data Visualization:**
-
+### **Data Visualization:**
 
 Visualizing time series data is essential for gaining insights. Common visualization techniques include line charts, bar charts, and seasonal decomposition plots.
 
-## **Anomaly Detection:**
-
+### **Anomaly Detection:**
 
 Time series data can be used to identify unusual or anomalous behavior, which is valuable in fields like cybersecurity and fault detection.
 
-
-## **Handling Missing Data:**
-
+### **Handling Missing Data:**
 
 Time series data often has missing values, and handling them appropriately is crucial to maintain the integrity of the analysis.
 
-
-## **Frequency of Data:**
-
+### **Frequency of Data:**
 
 Time series data can be categorized as high-frequency (e.g., minute-by-minute financial data) or low-frequency (e.g., monthly sales data), depending on the time intervals between observations.
 
-
-## **Smoothing:**
-
+### **Smoothing:**
 
 Smoothing techniques, such as moving averages, are used to reduce noise and highlight underlying patterns in time series data.
 
-
-## **Exogenous Variables:**
-
+### **Exogenous Variables:**
 
 In some cases, external factors or exogenous variables can influence time series data. Incorporating these factors into models can improve forecasting accuracy.
-
 
 Analyzing time series data requires a combination of statistical methods, data visualization tools, and domain knowledge. With the advent of machine learning and advanced analytics techniques, the field of time series analysis continues to evolve, enabling more accurate predictions and better decision-making in various domains.

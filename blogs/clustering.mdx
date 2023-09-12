@@ -1,12 +1,13 @@
 ---
 title: Clustering
-date: 4th September 2023
+date: 9th September 2023
+thumbnail: /bollinger-bands.png
 description: Clustering is a machine learning technique used for grouping similar data points or objects into clusters or clusters based on their intrinsic characteristics or similarities. The primary goal of clustering is to uncover hidden patterns and structure within data, making it a valuable tool for exploratory data analysis, data compression, and data preprocessing.
 ---
 
 Clustering is a machine learning technique used for grouping similar data points or objects into clusters or clusters based on their intrinsic characteristics or similarities. The primary goal of clustering is to uncover hidden patterns and structure within data, making it a valuable tool for exploratory data analysis, data compression, and data preprocessing. Here are some key concepts and aspects of clustering:
 
-## **Types of Clustering:**
+### **Types of Clustering:**
 
 - **Hierarchical Clustering:** This method builds a tree-like hierarchy of clusters, often represented as a dendrogram. It doesn't require specifying the number of clusters beforehand and allows for exploring different levels of granularity.
 
@@ -16,23 +17,23 @@ Clustering is a machine learning technique used for grouping similar data points
 
 - **Model-Based Clustering:** Model-based methods, like Gaussian Mixture Models (GMMs), assume that data points are generated from a mixture of probability distributions. They fit statistical models to the data to identify clusters.
 
-## **Similarity Measures:**
+### **Similarity Measures:**
 
 Clustering algorithms often rely on similarity or dissimilarity measures to determine how data points are grouped together. Common measures include Euclidean distance, cosine similarity, Jaccard similarity, and more. The choice of similarity measure depends on the nature of the data and the clustering algorithm used.
 
-## **Centroids and Medoids:**
+### **Centroids and Medoids:**
 
 Many clustering algorithms define cluster centers, such as centroids (average of data points) or medoids (the most representative point in a cluster). For example, K-Means uses centroids.
 
-## **Evaluation Metrics:**
+### **Evaluation Metrics:**
 
 Clustering quality is often assessed using evaluation metrics, such as Silhouette Score, Davies-Bouldin Index, and the Dunn Index. These metrics help measure the compactness and separation of clusters.
 
-## **Applications:**
+### **Applications:**
 
 Clustering is used in various fields and applications, including customer segmentation, image segmentation, document categorization, anomaly detection, and recommendation systems.
 
-## **Challenges:**
+### **Challenges:**
 
 Determining the optimal number of clusters (K) is a common challenge in clustering. Several methods, such as the elbow method and silhouette analysis, can help identify an appropriate K value.
 
@@ -40,19 +41,19 @@ Clustering can be sensitive to the choice of algorithm and initialization. Diffe
 
 Handling high-dimensional data can be challenging due to the curse of dimensionality. Dimensionality reduction techniques, such as PCA (Principal Component Analysis), may be applied before clustering.
 
-## **Hierarchical Clustering:**
+### **Hierarchical Clustering:**
 
 Hierarchical clustering builds a tree-like hierarchy of clusters, where each node represents a cluster or a combination of clusters. It can be agglomerative (bottom-up) or divisive (top-down).
 
-## **DBSCAN:**
+### **DBSCAN:**
 
 DBSCAN is a popular density-based clustering algorithm. It groups together data points that are closely packed, defining clusters based on density and noise.
 
-## **K-Means:**
+### **K-Means:**
 
 K-Means is a widely used partitioning clustering algorithm that aims to divide data into K clusters, where K is pre-defined. It minimizes the sum of squared distances between data points and their respective cluster centroids.
 
-## **GMM (Gaussian Mixture Model):**
+### **GMM (Gaussian Mixture Model):**
 
 GMM is a probabilistic model-based clustering algorithm that assumes data points are generated from a mixture of Gaussian distributions. It can handle clusters with different shapes and sizes.
 
