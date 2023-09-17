@@ -36,7 +36,7 @@ export default function Page({params}: any) {
   return (
       <article className="my-10 prose prose-xl dark:prose-invert max-w-full">
 
-        <div className="flex justify-center">
+        <div className="flex justify-center p-10">
           <Image src={props.fontMatter.thumbnail} alt="Blog Thumbnail" height={500} width={500}/>
         </div>
 
