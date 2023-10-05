@@ -1,10 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
-import Navbar from '@/components/navbar'
-import { Separator } from '@/components/ui/separator'
-import { ThemeProvider } from "@/components/theme-provider"
-import Footer from '@/components/footer'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -14,29 +10,15 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={raleway.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div  className="flex justify-end">
-            <Navbar/>
-          </div>
-
-          <div>
-            <Separator />
-          </div>
-
-          {children}
-
-          <div>
-            <Footer />
-          </div>
-        </ThemeProvider>
-      </body>
-    </html>
-  )
-}
+    children,
+  }: {
+    children: React.ReactNode
+  }) {
+    return (
+      <html lang="en" suppressHydrationWarning>
+        <body className={raleway.className}>
+            {children}
+        </body>
+      </html>
+    )
+  }
