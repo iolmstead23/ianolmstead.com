@@ -10,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex justify-end">
+          <div className="flex justify-end p-5">
             <Navbar />
           </div>
 
