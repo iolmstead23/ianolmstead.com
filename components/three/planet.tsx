@@ -1,5 +1,6 @@
 import { useSphere } from "@react-three/cannon";
 import { useLoader } from "@react-three/fiber"
+import { MutableRefObject, useRef } from "react";
 import { TextureLoader } from "three"
 
 interface Planet {
@@ -17,16 +18,16 @@ export default function Planets(planet: Planet) {
         args: [planet.size]
     }))
 
-    const speed: number = 1
+    const speed: MutableRefObject<number> = useRef(10)
 
     return (
         <>
             <mesh
                 ref={ref}
                 onClick={() => api.angularVelocity.set(
-                    Math.sign(Math.random()-0.5) * speed,
+                    Math.sign(Math.random()-0.5) * speed.current,
                     0,
-                    Math.sign(Math.random()-0.5) * speed)}
+                    Math.sign(Math.random()-0.5) * speed.current)}
                 castShadow
                 receiveShadow
             >
