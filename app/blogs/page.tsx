@@ -1,34 +1,47 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import Card from '@/components/ui/portfolio card'
+import { getBlogs } from "@/sanity/sanity.utils"
+import Image from "next/image"
+import Link from "next/link"
+import imageUrlBuilder from '@sanity/image-url'
+import { client } from "@/sanity/sanity.utils"
 
-export default function Blog() {
-  const blogDir = "blogs"
+const builder = imageUrlBuilder(client)
 
-  const files = fs.readdirSync(path.join(blogDir))
+// This forces update to the blog to happen right away
+export const fetchCache = 'force-no-store'
 
-  const blogs = files.map(filename => {
-    const fileContent = fs.readFileSync(path.join(blogDir, filename), "utf-8")
+function urlFor(source: any) {
+  return builder.image(source)
+}
 
-    const {data: frontMatter} = matter(fileContent)
+export default async function Blogs() {
 
-    return {
-      meta: frontMatter,
-      slug: filename.replace('.mdx','')
-    }
-  })
+  const blogs = await getBlogs()
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold p-10">
-        Blogs <br />
-      </h1>
+    <div className="text-center">
+      <div className="flex flex-col md:flex-row md:flex-wrap justify-center">
+          {blogs.map(({_id, title, mainImage, description, slug}) => (
+            <article className="p-10 m-10 border-black border-2 rounded-xl max-w-sm" key={_id}>
+              <Link href={["/blogs/",slug].join("")}>
+                <div className="flex justify-center pb-5">
+                  <Image
+                    src={mainImage ? urlFor(mainImage).url() : "/logo.png" }
+                    alt="blog image"
+                    width={100}
+                    height={100}
+                  />
+                </div>
 
-      <div className="md:flex md:flex-row md:flex-wrap justify-center">
-        {blogs.map(blog => (
-          <Card title={blog.meta.title} text={blog.meta.description.slice(0,200) + "..."} image={blog.meta.thumbnail} url={'/blogs/' + blog.slug} key={blog.slug}/>
-        ))}
+                <h1 className="text-xl pb-5">
+                  {title}
+                </h1>
+
+                <div className="text-sm">
+                  {description}
+                </div>
+              </Link>
+            </article>
+          ))}
       </div>
     </div>
   )

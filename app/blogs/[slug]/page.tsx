@@ -1,52 +1,65 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import { Metadata } from "next"
+import { getSingleProject } from "@/sanity/sanity.utils"
+import type { Blog } from "./../../../types/blog"
+import { PortableText } from "@portabletext/react"
+import { client } from "@/sanity/sanity.utils"
+import imageUrlBuilder from '@sanity/image-url'
+import Image from "next/image"
 
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import Image from 'next/image'
-
-const blogDir: string = "blogs"
-
-export async function generateStaticParams() {
-
-  const files = fs.readdirSync(path.join(blogDir))
-
-  const paths = files.map(filename => ({
-    slug: filename.replace('.mdx','')
-  }))
-
-  return paths
-}
-
-function getPost({slug}: {slug: string}) {
-  const markdownFile = fs.readFileSync(path.join(blogDir, slug + '.mdx'), 'utf-8')
-
-  const{data: fontMatter, content} = matter(markdownFile)
-
-  return {
-    fontMatter,
-    slug,
-    content
+type Props = {
+  params: {
+    slug: string;
   }
 }
+const builder = imageUrlBuilder(client)
 
-export default function Page({params}: any) {
-  const props = getPost(params)
+function urlFor(source: any) {
+  return builder.image(source)
+}
+
+// Dynamic metadata for SEO
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug
+  const blog: Blog = await getSingleProject(slug)
+
+  return {
+    title: `${blog.name} | Project`,
+    description: blog.description,
+    openGraph: {
+      images: blog.mainImage ? urlFor(blog.mainImage).url() : "/logo.png",
+      title: blog.name,
+      description: blog.description,
+    },
+  };
+}
+
+export default async function Blog({ params }: Props) {
+
+  const slug = params.slug
+  const blog: Blog = await getSingleProject(slug)
 
   return (
-      <article className="my-10 prose prose-xl dark:prose-invert max-w-full">
-
-        <div className="flex justify-center p-10">
-          <Image src={props.fontMatter.thumbnail} alt="Blog Thumbnail" height={500} width={500}/>
+    <article>
+        <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col">
+              <div className="mx-auto my-10">
+                <Image
+                  src={blog.mainImage ? urlFor(blog.mainImage).url() : "/logo.png"}
+                  alt=""
+                  width={250}
+                  height={250}
+                />
+              </div>
+              <div className="mx-auto">
+                <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4">
+                    {blog.title}
+                </h1>
+              </div>
+              <div>
+                  <PortableText value={blog.body} />
+              </div>
+            </div>
         </div>
-
-        <div className="text-center text-5xl font-bold">
-          {props.fontMatter.title}
-        </div>
-
-        <div className="text-justified px-10 my-10">
-          <MDXRemote source={props.content}></MDXRemote>
-        </div>
-      </article>
-  )
+    </article>
+  );
 }
