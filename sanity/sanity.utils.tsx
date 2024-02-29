@@ -1,11 +1,10 @@
 import { Blog } from "@/types/blog"
 import { groq, createClient } from "next-sanity"
-import "./../.env"
 
 export const client = createClient({
   // couldnt get this stored as an env variable to work
-  projectId: NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: NEXT_PUBLIC_SANITY_DATASET,
+  projectId: 'mkqmpj82',
+  dataset: 'production',
   useCdn: false, // set to `false` to bypass the edge cache
   apiVersion: '2023-01-01', // use current date (YYYY-MM-DD) to target the latest API version
 })

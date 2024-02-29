@@ -31,7 +31,7 @@ export default function Planets(planet: Planet) {
                 castShadow
                 receiveShadow
             >
-                <sphereGeometry args={[ planet.size]}/>
+                <sphereGeometry args={[planet.size]}/>
                 <meshStandardMaterial map={colorMap}/>
             </mesh>
         </>

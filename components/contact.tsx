@@ -2,14 +2,15 @@ import Link from "next/link";
 
 export default function Contact() {
     return (
-      <div className="text-2xl text-primary dark:text-primaryDark m-10">
-        Socials
-        <div className="flex-col text-base justify-center card bg-bg1 dark:bg-bg1Dark">
-          <div>LinkedIn <Link href="https://www.linkedin.com/in/ubermensch">@ubermensch</Link></div>
-          <div>Kaggle <Link href="https://www.kaggle.com/ianolmstead">@ianolmstead</Link></div>
-          <div>GitHub <Link href="https://github.com/iolmstead23">@iolmstead23</Link></div>
-          <div>Leetcode <Link href="https://leetcode.com/Apogi23/">@apogi23</Link></div>
-          <div>Email <Link href="mailto:ian.d.olmstead@gmail.com">ian.d.olmstead@gmail.com</Link></div>
+      <div className="text-2xl text-black dark:text-gray-300 m-10">
+        <div className="text-center m-5">Socials</div>
+        
+        <div className="flex text-base justify-around">
+          <div><Link href="https://www.linkedin.com/in/ubermensch">LinkedIn</Link></div>
+          <div><Link href="https://www.kaggle.com/ianolmstead">Kaggle</Link></div>
+          <div><Link href="https://github.com/iolmstead23">GitHub</Link></div>
+          <div><Link href="https://leetcode.com/Apogi23/">Leetcode</Link></div>
+          <div><Link href="mailto:ianolmstead1991@gmail.com">Email</Link></div>
         </div>
       </div>
     )

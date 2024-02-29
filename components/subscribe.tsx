@@ -2,7 +2,7 @@
 
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 export default function Subscribe() {
     const [email, setEmail] = useState("")

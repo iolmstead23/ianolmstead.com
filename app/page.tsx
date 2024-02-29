@@ -5,32 +5,27 @@ import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import Link from "next/link"
 import { Physics } from "@react-three/cannon"
-import Plane from "@/components/three/ground"
+import Ground from "@/components/three/ground"
 import { Html } from '@react-three/drei'
 import CTA from "@/components/fiverr/cta"
+import Light from "@/components/three/light"
+import Footer from "@/components/footer"
 
 export default function OuterSpace() {
 
     return (
         <>
-            <div className="w-screen h-screen text-white">
+            <div className="h-screen text-white">
                 <Canvas
-                    shadows
                     className="canvas"
-                    camera={{ position: [-1, 1, 15], fov: 50 }}
+                    camera={{ position: [-1, 1, 15], fov: 50}}
+                    shadows
                 >
-                <color attach="background" args={['lightblue']} />
+
                     <Suspense fallback={null} >
-                        <ambientLight intensity={.8} />
-                        <spotLight
-                            position={[5, 5, 5]}
-                            angle={0.3}
-                            penumbra={1}
-                            intensity={2}
-                            castShadow
-                            shadow-mapSize-width={256}
-                            shadow-mapSize-height={256}
-                        />
+
+                        <Light />
+                        <color attach="background" args={['lightblue']} />
 
                         <mesh>
                             <Html fullscreen>
@@ -45,7 +40,7 @@ export default function OuterSpace() {
                         </mesh>
 
                         <Physics defaultContactMaterial={{ contactEquationStiffness: 10000 }}>
-                            <Plane rotation={[-Math.PI / 2, 0, 0]} />
+                            <Ground rotation={[-Math.PI / 2, 0, 0]} receiveShadow />
 
                             <Planet texture={"Earth.jpg"} size={1} />
                             <Planet texture={"Saturn.jpg"} size={1.2} />
@@ -55,6 +50,7 @@ export default function OuterSpace() {
                     </Suspense>
                 </Canvas>
             </div>
+            <Footer />
         </>
     )
 }
