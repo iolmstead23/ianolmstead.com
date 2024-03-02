@@ -1,7 +1,7 @@
 'use client'
 
 import Planet from "@/components/three/planet"
-import { Suspense } from "react"
+import { Suspense, useEffect } from "react"
 import { Canvas } from "@react-three/fiber"
 import Link from "next/link"
 import { Physics } from "@react-three/cannon"
@@ -10,7 +10,7 @@ import { Html } from '@react-three/drei'
 import CTA from "@/components/fiverr/cta"
 import Light from "@/components/three/light"
 import Footer from "@/components/footer"
-import TagManager from "react-gtm-module"
+import TagManager from 'react-gtm-module'
 
 const tagManagerArgs = {
     gtmId: 'GTM-PDP55VPW',

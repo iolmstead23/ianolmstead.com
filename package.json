@@ -46,6 +46,7 @@
     "postgres": "^3.3.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-gtm-module": "^2.0.11",
     "react-hook-form": "^7.46.1",
     "sanity": "^3.30.0",
     "styled-components": "^6.1.8",
