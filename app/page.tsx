@@ -10,9 +10,19 @@ import { Html } from '@react-three/drei'
 import CTA from "@/components/fiverr/cta"
 import Light from "@/components/three/light"
 import Footer from "@/components/footer"
+import TagManager from "react-gtm-module"
 
-export default function OuterSpace() {
+const tagManagerArgs = {
+    gtmId: 'GTM-PDP55VPW',
+    dataLayerName: 'PageDataLayer'
+}
 
+export default function Home() {
+
+    useEffect(()=>{
+        TagManager.initialize(tagManagerArgs)
+      },[])
+    
     return (
         <>
             <div className="h-screen text-white">
