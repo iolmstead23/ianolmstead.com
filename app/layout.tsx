@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
+import { GoogleTagManager } from "@next/third-parties/google"
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={raleway.className}>
             {children}
+            <GoogleTagManager gtmId="GTM-PDP55VPW" />
         </body>
       </html>
     )

@@ -1,7 +1,7 @@
 'use client'
 
 import Planet from "@/components/three/planet"
-import { Suspense, useEffect } from "react"
+import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import Link from "next/link"
 import { Physics } from "@react-three/cannon"
@@ -10,18 +10,9 @@ import { Html } from '@react-three/drei'
 import CTA from "@/components/fiverr/cta"
 import Light from "@/components/three/light"
 import Footer from "@/components/footer"
-import TagManager from 'react-gtm-module'
-
-const tagManagerArgs = {
-    gtmId: 'GTM-PDP55VPW',
-    dataLayerName: 'PageDataLayer'
-}
+import { sendGTMEvent } from "@next/third-parties/google"
 
 export default function Home() {
-
-    useEffect(()=>{
-        TagManager.initialize(tagManagerArgs)
-      },[])
     
     return (
         <>
@@ -40,7 +31,7 @@ export default function Home() {
                         <mesh>
                             <Html fullscreen>
                                 <div className="text-gray-900 font-bold flex flex-row justify-end w-screen py-2 px-[100px] m-5">
-                                    <Link href="/blogs">Blog</Link>
+                                    <Link href="/blogs" onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'blog' })}>Blog</Link>
                                 </div>
                             </Html>
                         </mesh>
