@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blog: Blog = await getSingleProject(slug)
 
   return {
-    title: `${blog.name} | Project`,
+    title: blog.title,
     description: blog.description,
     openGraph: {
-      images: blog.mainImage ? urlFor(blog.mainImage).url() : "/logo.png",
-      title: blog.name,
+      images: blog.mainImage ? urlFor(blog.mainImage).url() : "/dummy_image.png",
+      title: blog.title,
       description: blog.description,
     },
   };
@@ -51,11 +51,11 @@ export default async function Blog({ params }: Props) {
                 />
               </div>
               <div className="mx-auto">
-                <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4">
+                <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4 m-[2em] lg:m-0">
                     {blog.title}
                 </h1>
               </div>
-              <div>
+              <div className="m-[3em] lg:m-0" >
                   <PortableText value={blog.body} />
               </div>
             </div>
