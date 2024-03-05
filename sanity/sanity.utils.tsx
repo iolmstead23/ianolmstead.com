@@ -1,6 +1,8 @@
 import { Blog } from "@/types/blog"
 import { groq, createClient } from "next-sanity"
 
+const today = new Date().toISOString().split('T')[0]
+
 export const client = createClient({
   // couldnt get this stored as an env variable to work
   projectId: 'mkqmpj82',
@@ -30,6 +32,10 @@ export async function getSingleProject(slug: string) {
       groq`*[_type == "post" && slug.current == $slug][0]{
         _id,
         _createdAt,
+        author->{
+          name,
+          image
+        },
         name,
         description,
         title,

@@ -57,3 +57,7 @@
   clip-path: circle(50% at center);
   filter: drop-shadow(1.25em .75em 0px rgb(150, 223, 150));
 }
+
+.blog-paragraph.h1, .blog-paragraph.h2, .blog-paragraph.h3 {
+  text-indent: 0px;
+}
