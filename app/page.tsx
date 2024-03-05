@@ -9,11 +9,11 @@ import Ground from "@/components/three/ground"
 import { Html } from '@react-three/drei'
 import CTA from "@/components/fiverr/cta"
 import Light from "@/components/three/light"
-import Footer from "@/components/footer"
 import { sendGTMEvent } from "@next/third-parties/google"
+import FAQ from "@/components/FAQ"
+import Socials from "@/components/socials"
 
 export default function Home() {
-    
     return (
         <>
             <div className="h-screen text-white">
@@ -24,7 +24,6 @@ export default function Home() {
                 >
 
                     <Suspense fallback={null} >
-
                         <Light />
                         <color attach="background" args={['lightblue']} />
 
@@ -51,7 +50,10 @@ export default function Home() {
                     </Suspense>
                 </Canvas>
             </div>
-            <Footer />
+
+            <FAQ />
+            <Socials />
+            <div className="text-center m-10">Website design by Ian Olmstead</div>
         </>
     )
 }
