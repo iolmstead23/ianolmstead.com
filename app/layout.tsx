@@ -1,4 +1,5 @@
 import './globals.css'
+import './embla.css'
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 import { GoogleTagManager } from "@next/third-parties/google"

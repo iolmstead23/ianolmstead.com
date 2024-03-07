@@ -5,6 +5,7 @@ import Socials from "@/components/socials"
 import CallToAction from "@/components/fiverr/cta2"
 import Link from "next/link"
 import { sendGTMEvent } from "@next/third-parties/google"
+import Gallery from "@/components/gallery"
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 <Link href="/blogs" onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'blog' })}>Blog</Link>
             </div>
             <CallToAction />
+            <Gallery />
             <FAQ />
             <Socials />
             <div className="text-center text-black pb-10">Website design by Ian Olmstead</div>
