@@ -1,3 +1,4 @@
+import Link from "next/link"
 import About from "./about"
 
 export default function Socials() {
@@ -10,6 +11,7 @@ export default function Socials() {
                 <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">About Me</h2>
                 <About />
               </div>
+              
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
                 <div className="rounded-2xl bg-gray-50 p-10">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">Business</h3>
@@ -17,9 +19,9 @@ export default function Socials() {
                     <div>
                       <dt className="sr-only">LinkedIn</dt>
                       <dd>
-                        <a className="font-semibold text-indigo-600" href="https://www.linkedin.com/in/ubermensch/">
+                        <Link className="font-semibold text-indigo-600" href="https://www.linkedin.com/in/ubermensch/">
                           LinkedIn
-                        </a>
+                        </Link>
                       </dd>
                     </div>
                   </dl>
@@ -30,9 +32,9 @@ export default function Socials() {
                     <div>
                       <dt className="sr-only">Kaggle</dt>
                       <dd>
-                        <a className="font-semibold text-indigo-600" href="https://www.kaggle.com/ianolmstead">
+                        <Link className="font-semibold text-indigo-600" href="https://www.kaggle.com/ianolmstead">
                           Kaggle
-                        </a>
+                        </Link>
                       </dd>
                     </div>
                   </dl>
@@ -43,17 +45,17 @@ export default function Socials() {
                     <div>
                       <dt className="sr-only">Leetcode</dt>
                       <dd>
-                        <a className="font-semibold text-indigo-600" href="https://leetcode.com/Apogi23/">
+                        <Link className="font-semibold text-indigo-600" href="https://leetcode.com/Apogi23/">
                           Leetcode
-                        </a>
+                        </Link>
                       </dd>
                     </div>
                     <div>
                       <dt className="sr-only">Leetcode</dt>
                       <dd>
-                        <a className="font-semibold text-indigo-600" href="https://github.com/iolmstead23">
+                        <Link className="font-semibold text-indigo-600" href="https://github.com/iolmstead23">
                           Github
-                        </a>
+                        </Link>
                       </dd>
                     </div>
                   </dl>
@@ -64,17 +66,17 @@ export default function Socials() {
                     <div>
                       <dt className="sr-only">CivitAI</dt>
                       <dd>
-                        <a className="font-semibold text-indigo-600" href="https://civitai.com/user/iolmstead23">
+                        <Link className="font-semibold text-indigo-600" href="https://civitai.com/user/iolmstead23">
                           CivitAI
-                        </a>
+                        </Link>
                       </dd>
                     </div>
                     <div>
                       <dt className="sr-only">CivitAI</dt>
                       <dd>
-                        <a className="font-semibold text-indigo-600" href="https://huggingface.co/iolmstead">
+                        <Link className="font-semibold text-indigo-600" href="https://huggingface.co/iolmstead">
                           HuggingFace
-                        </a>
+                        </Link>
                       </dd>
                     </div>
                   </dl>
