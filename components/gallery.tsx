@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import EmblaCarousel from './embla/EmblaCarousel';
+import EmblaCarousel from '@/components/embla/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel';
 
 const images: string[] = [];
