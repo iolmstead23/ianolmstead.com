@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="indent-8 my-10 mx-5">
+        <div className="indent-8 my-10">
             <p>
                 Im Ian Olmstead, and buckle up because youre about to dive headfirst into my coding odyssey. It all started when I was just a teen, cranking out RPG and zombie video games like there was no tomorrow. Back then, it was just a cool way to kill time, but little did I know it was laying the foundation for something epic.<br />
             </p>

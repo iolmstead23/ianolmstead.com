@@ -6,6 +6,7 @@ import CallToAction from "@/components/fiverr/cta2"
 import Link from "next/link"
 import { sendGTMEvent } from "@next/third-parties/google"
 import Gallery from "@/components/gallery"
+import Features from "@/components/features"
 
 export default function Home() {
     return (
@@ -16,8 +17,9 @@ export default function Home() {
             <CallToAction />
             <Gallery />
             <FAQ />
+            <Features />
             <Socials />
-            <div className="text-center text-black pb-10">Website design by Ian Olmstead</div>
+            <div className="text-center text-black py-10">Website design by Ian Olmstead</div>
         </div>
     )
 }

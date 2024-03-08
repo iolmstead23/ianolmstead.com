@@ -3,7 +3,7 @@ import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
 
 const faqs = [
   {
-    question: "Why should I work with you?",
+    question: "Why Should I Work With You?",
     answer:
       "I have a background in coding starting from age 13. I got my Applied Data Science certificate from MIT in 2020 which I use everyday. I am completing a bachelors degree in computer science. I understand personal and business needs and want to help you manifest your ideas!",
   },
@@ -17,10 +17,10 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="bg-white mx-5 lg:mx-0">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
-          <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
+    <div className="bg-white px-10 2xl:px-0">
+      <div className="mx-auto max-w-7xl py-24 sm:py-10 lg:py-32">
+        <div className="mx-auto divide-y divide-gray-900/10">
+          <h2 className="text-center text-3xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
           <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
